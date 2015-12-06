@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<div class="home">
+  <section class="post-list">
+    {% for post in paginator.posts %}
+    <article class="post-list-item" itemscope itemtype="http://schema.org/BlogPosting">
+      <header>
+        <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}" itemprop="name headline">{{ post.title }}</a></h2>
+      </header>
+      <section>
+      <p><time datetime="{{post.date | date_to_xmlschema}}" class="post-meta" itemprop="datePublished">{{post.date | date:"%B %-d, %Y" }}</time></p>
+      {% if post.cover and post.cover != "" %}
+        <a href="{{ post.url | prepend: site.baseurl }}">
+        <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+          <img itemprop="url" src="{{ post.cover }}" alt="{{post.title}}" />
+        </figure>
+        </a>
+      {% endif %}
+      <summary>
+        <p>{{ post.excerpt | strip_html }}</p>
+      </summary>
+      </section>
+      <footer class="read-more"><a href="{{ post.url | prepend: site.baseurl }}">Continue Reading →</a></footer>
+    </article>
+    {% endfor %}
+  </section>
+  <div class="pagination">
+    {% if paginator.previous_page %}
+       <a href="{{ paginator.previous_page_path }}" class="previous">&lt;&lt;&nbsp;Previous</a>
+    {% else %}
+        <span class="previous">&lt;&lt;&nbsp;Previous</span>
+    {% endif %}
+    <span class="page_number ">Page: {{ paginator.page }} of {{paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}" class="next">Next&nbsp;&gt;&gt;</a>
+    {% else %}
+        <span class="next ">Next&nbsp;&gt;&gt;</span>
+    {% endif %}
+  </div>
+</div>

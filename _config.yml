@@ -1,0 +1,36 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+
+title: Jekyll-Read Theme
+email: email@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  A Jekyll theme built by extending the default and inspired by Read Wordpress theme.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://example.com" # the base hostname & protocol for your site
+twitter_username: username
+github_username:  username
+sass:
+  style: compressed
+
+# Pagination
+gems: [jekyll-paginate]
+paginate: 5
+paginate_path: "page:num"
+# Build settings
+markdown: kramdown
+
+# Mailchimp Newsletter URL if any 
+# mailchimp: ""
+
+# Uncomment and change values to add Google Analytics
+# ga_id: UA-12323434-1
+# ga_domain: example.com
+
+# Disqus forumname. Uncomment and change the value if you want to enable Disqus commenting in blog posts.
+disqus: bitwiser

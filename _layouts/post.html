@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+    {% if page.cover and page.cover != "" %}
+    <figure itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+      <img itemprop="url" src="{{ page.cover }}" alt="{{ page.title }}" />
+    </figure>
+    {% endif %}
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%B %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+  {% if site.mailchimp or site.disqus or site.mailchimp != "" or site.disqus != "") %}
+  <footer>
+  {% if site.mailchimp and site.mailchimp != "" %}
+  <form action="{{site.mailchimp}}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form" target="_blank" novalidate="">
+    <legend>Liked the post? Subscribe to get notified of new ones.</legend>
+    <p><input type="email" value="" name="EMAIL" class="mui-form-control mui-empty" id="mce-EMAIL" placeholder="Your email"></p>
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_98dffea21944db66c8fa221ec_8cc0f04ed1" tabindex="-1" value=""></div>
+    <p><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="mui-btn mui-btn-primary"></p>
+  </form>
+  {% endif %}
+  {% if site.disqus and site.disqus != "" %}
+    <p class="comment-begin"><a href="#" id="showComments"><i class="fa fa-comment-o"></i>Comments</a></p>
+    <div id="disqus_thread"></div>
+  {% endif %}
+  </footer>
+  {% endif %}
+
+</article>
