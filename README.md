@@ -18,7 +18,7 @@ A jekyll theme built on top of default jekyll theme and inspired by [Read WordPr
 
 * Download `zip` from the latest [release](https://github.com/brijeshb42/Jekyll-Read/releases).
 * Change values in `_config.yml` as required. This file is commented wherever required.
-* Change the value in the `CNAME` file if you have your own domain.
+* Create a file named `CNAME` and your domain (example.com) as its only line if you have your own domain.
 * Change the value of the `url` variable to your blog's URL (eg: `http://githubusername.github.io`).
 * Uncomment and add a value to `disqus` variable if you want to have disqus commenting enabled.
 * Uncomment and add values to `ga_id` and `ga_domain` to add Google Analytics.
