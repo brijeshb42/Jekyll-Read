@@ -29,8 +29,8 @@ markdown: kramdown
 # mailchimp: ""
 
 # Uncomment and change values to add Google Analytics
-# ga_id: UA-12323434-1
-# ga_domain: example.com
+ga_id: UA-47902363-1
+ga_domain: bitwiser.in
 
 # Disqus forumname. Uncomment and change the value if you want to enable Disqus commenting in blog posts.
-# disqus: forumname
+disqus: bitwiser
