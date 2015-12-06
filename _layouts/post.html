@@ -16,7 +16,6 @@ layout: default
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
-  {% if site.mailchimp or site.disqus or site.mailchimp != "" or site.disqus != "") %}
   <footer>
   {% if site.mailchimp and site.mailchimp != "" %}
   <form action="{{site.mailchimp}}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form" target="_blank" novalidate="">
@@ -31,6 +30,5 @@ layout: default
     <div id="disqus_thread"></div>
   {% endif %}
   </footer>
-  {% endif %}
 
 </article>
