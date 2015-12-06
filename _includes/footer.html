@@ -38,7 +38,7 @@
     </div>
   </div>
 </footer>
-<script type="text/javascript" src="/js/script.js"></script>
+<script type="text/javascript" src="{{ "/js/script.js" | prepend: site.baseurl | prepend: site.url}}"></script>
 {% if site.ga_id %}
   {% include analytics.html %}
 {% endif %}
