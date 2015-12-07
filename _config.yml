@@ -13,8 +13,8 @@ description: > # this means to ignore newlines until "baseurl:"
   A Jekyll theme built by extending the default and inspired by Read Wordpress theme.
 url: "http://bitwiser.in/Jekyll-Read" # the base hostname & protocol for your site
 baseurl: "" # the subpath of your site, e.g. /blog
-twitter_username: brijeshb42/Jekyll-Read
-github_username:  brijeshb42
+twitter_username: brijeshb42
+github_username:  brijeshb42/Jekyll-Read
 sass:
   style: compressed
 
