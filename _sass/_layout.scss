@@ -33,6 +33,19 @@
             color: $grey-color-dark;
         }
     }
+
+    @include media-query($on-palm) {
+        margin: 10px 0 5px 0;
+
+        a {
+            font-size: 1.5em;
+        }
+    }
+}
+
+.site-description {
+    font-size: 0.8em;
+    font-weight: 400;
 }
 
 .site-nav {

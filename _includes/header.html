@@ -3,6 +3,9 @@
     <h1 class="site-title">
       <a href="{{ site.baseurl | prepend:site.url }}/">{{ site.title }}</a>
     </h1>
+    {% if site.description %}
+    <h2 class="site-description">{{ site.description }}</h2>
+    {% endif %}
   </div>
   <nav class="site-nav">
     <ul class="trigger">
