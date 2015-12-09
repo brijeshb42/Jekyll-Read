@@ -65,10 +65,13 @@ $on-laptop:        800px;
 }
 
 .highlight {
-    border: 0;
+    padding: 5px;
+
     pre {
+        margin: 0;
         padding: 0;
     }
+
     table {
         width: 100%;
     }

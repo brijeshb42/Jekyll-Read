@@ -2,11 +2,18 @@
  * Syntax highlighting styles
  */
 .highlight {
-    background: #fff;
+    background: #F9F9F9;
+    border: 1px solid $grey-color-light;
+
     @extend %vertical-rhythm;
 
     .highlighter-rouge & {
       background: #eef;
+    }
+
+    .lineno {
+        border-right: 1px solid $grey-color-light;
+        padding-right: 2px;
     }
 
     .c     { color: #998; font-style: italic } // Comment
