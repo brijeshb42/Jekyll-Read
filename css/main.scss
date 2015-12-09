@@ -7,7 +7,7 @@
 
 // Our variables
 $base-font-family: "Coustard", Georgia, serif;
-$base-font-size:   16px;
+$base-font-size:   18px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -21,6 +21,8 @@ $brand-color:      #2a7ae2;
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
+
+$code-bg-color:    #F9F9F9;
 
 // Width of the content area
 $content-width:    800px;
@@ -70,6 +72,10 @@ $on-laptop:        800px;
     pre {
         margin: 0;
         padding: 0;
+    }
+
+    code {
+        background: $code-bg-color;
     }
 
     table {
